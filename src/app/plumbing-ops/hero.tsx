@@ -1,0 +1,75 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function fireGtagEvent(label: string) {
+  window.gtag?.("event", "plumbing_ops_cta", {
+    event_label: label,
+  });
+}
+
+export function Hero() {
+  return (
+    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden px-6 py-24">
+      {/* Subtle gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(14,165,233,0.08)_0%,_transparent_60%)]" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative z-10 mx-auto max-w-4xl text-center"
+      >
+        <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          Run your plumbing shop like the{" "}
+          <span className="text-accent">$10M</span> guys.{" "}
+          <span className="text-muted-foreground">
+            Without paying like them.
+          </span>
+        </h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl"
+        >
+          Custom-built, owned software that scales with your business, not your
+          SaaS bill.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+        >
+          <Button
+            size="lg"
+            onClick={() => fireGtagEvent("book_demo")}
+            className="w-full cursor-pointer sm:w-auto"
+          >
+            Book a 20-minute demo
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="w-full sm:w-auto"
+            onClick={() => fireGtagEvent("see_live_demo")}
+          >
+            <Link href="/plumbing-ops/demo">See the live demo</Link>
+          </Button>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}

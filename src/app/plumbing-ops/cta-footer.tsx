@@ -1,0 +1,51 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+function fireGtagEvent(label: string) {
+  window.gtag?.("event", "plumbing_ops_cta", {
+    event_label: label,
+  });
+}
+
+export function CtaFooter() {
+  return (
+    <section className="px-6 py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 p-12 text-center"
+      >
+        <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
+          Ready to own your software?
+        </h2>
+        <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+          Stop renting software that holds your data hostage. Get a system built
+          for your shop — and keep it forever.
+        </p>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Button
+            size="lg"
+            onClick={() => fireGtagEvent("book_demo")}
+            className="w-full cursor-pointer sm:w-auto"
+          >
+            Book a 20-minute demo
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="w-full sm:w-auto"
+            onClick={() => fireGtagEvent("see_live_demo")}
+          >
+            <Link href="/plumbing-ops/demo">See the live demo</Link>
+          </Button>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
