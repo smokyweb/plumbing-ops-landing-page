@@ -6,9 +6,9 @@ import { FeatureGrid } from "./feature-grid";
 import { CtaFooter } from "./cta-footer";
 
 export const metadata: Metadata = {
-  title: "Plumbing Ops Software — Own It, Don't Rent It | Bluestone Apps",
+  title: "PlumbControl — Own It, Don't Rent It",
   description:
-    "Custom-built operations software for plumbing companies with 3-25 trucks. Replace ServiceTitan, Housecall Pro, and FieldEdge with software you own — no per-seat fees, no vendor lock-in.",
+    "PlumbControl: Custom-built operations software for plumbing companies with 3-25 trucks. Replace ServiceTitan, Housecall Pro, and FieldEdge with software you own — no per-seat fees, no vendor lock-in.",
 };
 
 export default function PlumbingOpsPage() {

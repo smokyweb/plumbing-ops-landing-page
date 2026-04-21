@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 function fireGtagEvent(label: string) {
   window.gtag?.("event", "plumbing_ops_cta", {
@@ -18,8 +19,16 @@ export function CtaFooter() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 p-12 text-center"
+        className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-accent/20 bg-accent/5 text-center"
       >
+        <Image
+          src="/plumbers-team.jpg"
+          alt="PlumbControl team in the field"
+          width={900}
+          height={300}
+          className="w-full object-cover"
+        />
+        <div className="p-12">
         <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
           Ready to own your software?
         </h2>
@@ -44,6 +53,7 @@ export function CtaFooter() {
           >
             <Link href="/plumbing-ops/demo">See the live demo</Link>
           </Button>
+        </div>
         </div>
       </motion.div>
     </section>
