@@ -50,14 +50,14 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg text-muted-foreground sm:text-xl">
-              Custom-built, owned software for plumbing companies with 3–25 trucks.
+              Custom-built, owned software for plumbing companies with 2–25+ trucks.
               Replace ServiceTitan and Housecall Pro with software you own — no per-seat fees, no vendor lock-in.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
-                onClick={() => fireGtagEvent("book_demo")}
+                onClick={() => { fireGtagEvent("book_demo"); window.open("https://calendly.com/bluestoneapps/plumbcontrol", "_blank"); }}
                 className="cursor-pointer"
               >
                 Book a 20-minute demo

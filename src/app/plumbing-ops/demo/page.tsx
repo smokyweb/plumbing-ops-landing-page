@@ -21,7 +21,9 @@ export default function DemoPage() {
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="mailto:kevin@bluestoneapps.com?subject=PlumbControl Demo Request"
+            href="https://calendly.com/bluestoneapps/plumbcontrol"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-3 text-base font-medium text-accent-foreground transition hover:bg-accent/90"
           >
             Book a walkthrough

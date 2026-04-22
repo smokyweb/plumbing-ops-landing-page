@@ -167,27 +167,7 @@ export function RoiCalculator() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-border bg-muted/30 p-6">
-                <p className="mb-1 text-sm font-medium text-muted-foreground">
-                  Payback period on custom build
-                </p>
-                <p className="text-4xl font-bold text-card-foreground">
-                  {paybackMonths === Infinity ? (
-                    "N/A"
-                  ) : (
-                    <>
-                      <AnimatedNumber value={paybackMonths} />{" "}
-                      <span className="text-lg font-normal text-muted-foreground">
-                        months
-                      </span>
-                    </>
-                  )}
-                </p>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Based on ${BUILD_COST.toLocaleString()} build + $
-                  {MONTHLY_SUPPORT.toLocaleString()}/mo support
-                </p>
-              </div>
+
             </div>
           </div>
         </motion.div>
