@@ -81,8 +81,8 @@ export function Hero() {
             className="relative"
           >
             <Image
-              src="/plumber-work.jpg"
-              alt="Plumber working on pipes"
+              src="/main.png"
+              alt="PlumbControl plumbing operations"
               width={600}
               height={400}
               className="rounded-2xl object-cover shadow-2xl"
@@ -91,24 +91,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Fleet image strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="mt-16"
-        >
-          <p className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            Built for fleets like yours
-          </p>
-          <Image
-            src="/plumbing-fleet.jpg"
-            alt="Fleet of plumbing service trucks"
-            width={1200}
-            height={400}
-            className="w-full rounded-2xl object-cover shadow-xl"
-          />
-        </motion.div>
+
       </div>
     </section>
   );

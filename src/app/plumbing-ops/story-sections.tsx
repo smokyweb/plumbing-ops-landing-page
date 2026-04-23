@@ -14,30 +14,30 @@ interface StoryBlock {
 const blocks: StoryBlock[] = [
   {
     title: "Does This Look Like Your Plumbing Company?",
-    image: "/plumbing-company-stressed.png",
+    image: "/1.png",
     alt: "Stressed plumbing company owner",
     imageFirst: true,
   },
   {
     title: "Are Your Customers Unhappy?",
-    image: "/plumbing-company-customer-stressed.png",
+    image: "/2.png",
     alt: "Stressed plumbing customer",
   },
   {
     title: "PlumbControl Changes Everything",
-    image: "/plumber-with-customer.png",
+    image: "/3.png",
     alt: "Happy plumber with satisfied customer",
     body: "With PlumbControl, your staff is working efficiently and effectively. Our proven platform will organize your workflow, schedules and staff. This results in dramatically improved workflow and happy customers.",
   },
   {
     title: "Your Crew Will Also Be Well Organized With Their Schedules",
-    image: "/plumbing-crew-schedule.png",
+    image: "/4.png",
     alt: "Well-organized plumbing crew schedule",
     imageFirst: true,
   },
   {
     title: "Provide Easy-to-Follow Service Tasks Directly to Your Crew's Phone",
-    image: "/plumber-phone-task.png",
+    image: "/main.png",
     alt: "Plumber receiving tasks on phone",
     body: "Service tasks are sent directly to your crew's phones and coordinated with the in-office team — keeping everyone on the same page, every job, every time.",
   },
@@ -82,6 +82,20 @@ export function StorySections() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* Fleet photo at bottom */}
+      <div className="mx-auto max-w-5xl mt-20">
+        <p className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
+          Built for fleets like yours
+        </p>
+        <Image
+          src="/plumbing-fleet.jpg"
+          alt="Fleet of plumbing service trucks"
+          width={1200}
+          height={400}
+          className="w-full rounded-2xl object-cover shadow-xl"
+        />
       </div>
     </section>
   );
