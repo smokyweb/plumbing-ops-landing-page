@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useCalendlyLink } from "./use-calendly-link";
 
 function fireGtagEvent(label: string) {
   window.gtag?.("event", "plumbing_ops_cta", {
@@ -12,6 +13,7 @@ function fireGtagEvent(label: string) {
 }
 
 export function CtaFooter() {
+  const calendlyLink = useCalendlyLink();
   return (
     <section className="px-6 py-24">
       <motion.div
@@ -39,7 +41,7 @@ export function CtaFooter() {
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button
             size="lg"
-            onClick={() => { fireGtagEvent("book_demo"); window.open("https://calendly.com/bluestoneapps/plumbcontrol", "_blank"); }}
+            onClick={() => { fireGtagEvent("book_demo"); window.open(calendlyLink, "_blank"); }}
             className="w-full cursor-pointer sm:w-auto"
           >
             Book a 20-minute demo

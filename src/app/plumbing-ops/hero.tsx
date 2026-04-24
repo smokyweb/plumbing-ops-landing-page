@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { useCalendlyLink } from "./use-calendly-link";
 
 declare global {
   interface Window {
@@ -18,6 +19,7 @@ function fireGtagEvent(label: string) {
 }
 
 export function Hero() {
+  const calendlyLink = useCalendlyLink();
   return (
     <section className="relative overflow-hidden px-6 py-24">
       {/* Subtle gradient background */}
@@ -57,7 +59,7 @@ export function Hero() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
-                onClick={() => { fireGtagEvent("book_demo"); window.open("https://calendly.com/bluestoneapps/plumbcontrol", "_blank"); }}
+                onClick={() => { fireGtagEvent("book_demo"); window.open(calendlyLink, "_blank"); }}
                 className="cursor-pointer"
               >
                 Book a 20-minute demo

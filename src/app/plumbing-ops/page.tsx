@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Hero } from "./hero";
 import { Problem } from "./problem";
 import { RoiCalculator } from "./roi-calculator";
@@ -15,12 +16,14 @@ export const metadata: Metadata = {
 export default function PlumbingOpsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <Hero />
-      <StorySections />
-      <Problem />
-      <RoiCalculator />
-      <FeatureGrid />
-      <CtaFooter />
+      <Suspense>
+        <Hero />
+        <StorySections />
+        <Problem />
+        <RoiCalculator />
+        <FeatureGrid />
+        <CtaFooter />
+      </Suspense>
     </main>
   );
 }
