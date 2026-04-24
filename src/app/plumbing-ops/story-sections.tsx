@@ -31,13 +31,13 @@ const blocks: StoryBlock[] = [
   },
   {
     title: "Your Crew Will Also Be Well Organized With Their Schedules",
-    image: "/4.png",
+    image: "/6.png",
     alt: "Well-organized plumbing crew schedule",
     imageFirst: true,
   },
   {
     title: "Provide Easy-to-Follow Service Tasks Directly to Your Crew's Phone",
-    image: "/main.png",
+    image: "/4.png",
     alt: "Plumber receiving tasks on phone",
     body: "Service tasks are sent directly to your crew's phones and coordinated with the in-office team — keeping everyone on the same page, every job, every time.",
   },
