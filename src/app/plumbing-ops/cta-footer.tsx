@@ -39,7 +39,7 @@ export function CtaFooter() {
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button
             size="lg"
-            onClick={() => fireGtagEvent("book_demo")}
+            onClick={() => { fireGtagEvent("book_demo"); window.open("https://calendly.com/bluestoneapps/plumbcontrol", "_blank"); }}
             className="w-full cursor-pointer sm:w-auto"
           >
             Book a 20-minute demo
